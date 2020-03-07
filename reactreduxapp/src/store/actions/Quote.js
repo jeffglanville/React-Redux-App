@@ -7,7 +7,7 @@ export const FETCHING_QUOTE_FAILURE = "FETCHING_QUOTE_FAILURE";
 export const getQuote = () => dispatch => {
     dispatch({ type: FETCHING_QUOTE_START });
 
-    axios.get('programming-quotes-api.herokuapp.com/quotes')
+    axios.get('https://programming-quotes-api.herokuapp.com/quotes')
     .then(res => {
         console.log("res", res);
         dispatch({ type: FETCHING_QUOTE_SUCCESS, payload: res.data.quote });
