@@ -11,6 +11,7 @@ export const reducer = (state = initialState, action) => {
         case FETCHING_QUOTE_START:
             return {
                 ...state,
+                quote: null,
                 isFetching: true,
                 error: " "
             };
@@ -18,7 +19,8 @@ export const reducer = (state = initialState, action) => {
         return {
             ...state,
             isFetching: false,
-            quote: action.payload
+            quote: action.payload,
+            error: ""
         };
         default:
             return state;

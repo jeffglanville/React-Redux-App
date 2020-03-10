@@ -10,7 +10,7 @@ export const getQuote = () => dispatch => {
     axios.get('https://programming-quotes-api.herokuapp.com/quotes')
     .then(res => {
         console.log("res", res);
-        dispatch({ type: FETCHING_QUOTE_SUCCESS, payload: res.data.quote });
+        dispatch({ type: FETCHING_QUOTE_SUCCESS, payload: res.data.results });
     })
     .catch(err => {
         console.log("err", err);
