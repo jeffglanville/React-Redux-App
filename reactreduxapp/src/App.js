@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import MyQuotes from './components/MyQuotes';
+import MySuperHero from './components/MySuperHero';
 
 function App() {
   return (
     <div className="App">
-      <h1>Quotes to Lighten Your Day</h1>
-      <MyQuotes />
+      <h1>Superhero Info: </h1>
+      <MySuperHero />
     </div>
   );
 }

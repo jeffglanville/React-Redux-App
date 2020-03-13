@@ -1,25 +1,24 @@
-import { FETCHING_QUOTE_START, FETCHING_QUOTE_SUCCESS } from '../actions/Quote';
+import { FETCHING_SUPERHERO_START, FETCHING_SUPERHERO_SUCCESS } from '../actions/Superhero';
 
 const initialState = {
-    quote: null,
+    superhero: [],
     isFetching: false,
     error: " "
 };
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCHING_QUOTE_START:
+        case FETCHING_SUPERHERO_START:
             return {
                 ...state,
-                quote: null,
                 isFetching: true,
                 error: " "
             };
-        case FETCHING_QUOTE_SUCCESS:
+        case FETCHING_SUPERHERO_SUCCESS:
         return {
             ...state,
             isFetching: false,
-            quote: action.payload,
+            superhero: action.payload,
             error: ""
         };
         default:
