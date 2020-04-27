@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {getSuperHero} from '../store/actions/Superhero';
+import {getSuperHero} from './store/actions/Superhero';
 
 const SuperHero = ({ getSuperHero, SuperHero, isFetching, error }) => {
     if (isFetching) {
@@ -10,7 +10,7 @@ const SuperHero = ({ getSuperHero, SuperHero, isFetching, error }) => {
     if (error) {
         return <h2>{error}</h2>;
     }
-
+    console.log(SuperHero)
     return(
         <div>
             <h2>Super Hero: </h2>
@@ -30,14 +30,14 @@ const SuperHero = ({ getSuperHero, SuperHero, isFetching, error }) => {
                     </div>
                 )
             })}
-            <button onClick={getSuperHero}>Click for a Different Quote</button>
+            <button onClick={getSuperHero}>Click for a Different Hero</button>
         </div>
     );
 };
 
 const mapStateToProps = state => {
     return {
-        superhero: state.superhero,
+        SuperHero: state.SuperHero,
         isFetching: state.isFetching,
         error: state.error
     };
