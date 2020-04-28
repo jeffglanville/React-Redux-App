@@ -10,7 +10,6 @@ const SuperHero = ({ getSuperHero, SuperHero, isFetching, error }) => {
     if (error) {
         return <h2>{error}</h2>;
     }
-    console.log(SuperHero)
     return(
         <div>
             <h2>Super Hero: </h2>

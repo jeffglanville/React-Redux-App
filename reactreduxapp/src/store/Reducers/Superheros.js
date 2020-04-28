@@ -1,4 +1,4 @@
-import { FETCHING_SUPERHERO_START, FETCHING_SUPERHERO_SUCCESS } from '../actions/Superhero';
+import { FETCHING_SUPERHERO_START, FETCHING_SUPERHERO_SUCCESS, FETCHING_SUPERHERO_FAILURE } from '../actions/Superhero';
 
 const initialState = {
     SuperHero: [],
@@ -12,7 +12,6 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: true,
-                error: " "
             };
         case FETCHING_SUPERHERO_SUCCESS:
             console.log(action.payload)
@@ -20,8 +19,13 @@ export const reducer = (state = initialState, action) => {
             ...state,
             isFetching: false,
             SuperHero: action.payload,
-            error: ""
         };
+        case FETCHING_SUPERHERO_FAILURE:
+            return {
+                ...state,
+                isFetching: false,
+                error: "No Superhero Found for search results!"
+            }
         default:
             return state;
     }
