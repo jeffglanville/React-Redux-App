@@ -1,21 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {getSuperHero} from './store/actions/Superhero';
+import './MySuperHero.css';
 
-const SuperHero = ({ getSuperHero, SuperHero, isFetching, error }) => {
-    if (isFetching) {
-        return<h2>Fetching your Super Hero:P</h2>;
-    }
 
-    if (error) {
-        return <h2>{error}</h2>;
-    }
+const SuperHero = ({ getSuperHero, SuperHero}) => {
+
     return(
-        <div>
-            <h2>Super Hero: </h2>
+        <div className="superhero-wrapper">
+            <h1>Super Hero: </h1>
             {SuperHero.map((hero) => {
                 return (
-                    <div>
+                    <div className="superhero">
                         <p>Name: {hero.name}</p>
                         <p>Intelligence: {hero.powerstats.intelligence}</p>
                         <p>Strength: {hero.powerstats.strength}</p>
@@ -23,9 +19,7 @@ const SuperHero = ({ getSuperHero, SuperHero, isFetching, error }) => {
                         <p>Durability: {hero.powerstats.durability}</p>
                         <p>Power: {hero.powerstats.power}</p>
                         <p>Combat: {hero.powerstats.combat}</p>
-                        <p>Gender: {hero.appearance.gender}</p>
                         <p>Race: {hero.appearance.race}</p>
-                        <p>Relatives: {hero.connections.relatives}</p>
                     </div>
                 )
             })}
