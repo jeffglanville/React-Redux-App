@@ -27,7 +27,7 @@ const SuperHero = ({ getSuperHero, SuperHero}) => {
                     )
                 })}
                 </div>
-                <button onClick={getSuperHero}>Click for a Different Hero</button>
+                <button onClick={getSuperHero}>Click for a list of heros</button>
         </div>
     );
 };
