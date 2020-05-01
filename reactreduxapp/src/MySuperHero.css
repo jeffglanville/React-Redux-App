@@ -1,19 +1,27 @@
-.superhero-wrapper {
-    margin: 10px;
-    width: 100%;
+.big {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
-.superhero {
-    border: 2px solid dodgerblue;
+h1 {
+    font-size: 45px;
+    color: rgba(251, 255, 0, 0.747);
+    background-color: rgba(0, 0, 0, 0.438);
     width: 20%;
     margin: 10px;
+}
+
+.superhero-wrapper {
+    border: 3px solid rgb(0, 0, 0);
+    /* width: 20%; */
+    background-color: rgba(197, 218, 245, 0.61);
+    color: rgb(16, 1, 80);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+    margin: 10px;
     padding: 10px;
-    background-color: rgba(11, 226, 241);
-    color: rgb(0, 0, 0);
 }
 
 p{
