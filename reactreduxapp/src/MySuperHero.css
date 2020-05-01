@@ -1,0 +1,30 @@
+.big {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 45px;
+    color: rgba(251, 255, 0, 0.747);
+    background-color: rgba(0, 0, 0, 0.438);
+    width: 20%;
+    margin: 10px;
+}
+
+.superhero-wrapper {
+    border: 3px solid rgb(0, 0, 0);
+    /* width: 20%; */
+    background-color: rgba(197, 218, 245, 0.61);
+    color: rgb(16, 1, 80);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 10px;
+}
+
+p{
+    margin: 2px;
+    padding: 2px;
+}
